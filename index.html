@@ -161,15 +161,15 @@ FULL-SCREEN DROPDOWN MENÜ
 ============================================ */
 .mobile-dropdown {
 position: fixed;
-top: 72px;
+top: 0px;
 right: 2rem;
 width: fit-content;
 min-width: 200px;
 height: 100vh;
 height: 100dvh;
-background: rgba(255, 255, 255, 0.7);
-backdrop-filter: blur(15px);
--webkit-backdrop-filter: blur(15px);
+background: rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
 z-index: 10000;
 display: none;
 flex-direction: column;
@@ -201,6 +201,25 @@ border-bottom: none;
 color: var(--color-primary);
 padding-left: 1rem;
 }
+.mobile-dropdown--open .mobile-dropdown__link {
+animation: slideInLink 0.4s ease forwards;
+opacity: 0;
+transform: translateY(20px);
+}
+
+.mobile-dropdown--open .mobile-dropdown__link:nth-child(1) { animation-delay: 0.05s; }
+.mobile-dropdown--open .mobile-dropdown__link:nth-child(2) { animation-delay: 0.10s; }
+.mobile-dropdown--open .mobile-dropdown__link:nth-child(3) { animation-delay: 0.15s; }
+.mobile-dropdown--open .mobile-dropdown__link:nth-child(4) { animation-delay: 0.20s; }
+.mobile-dropdown--open .mobile-dropdown__link:nth-child(5) { animation-delay: 0.25s; }
+.mobile-dropdown--open .mobile-dropdown__link:nth-child(6) { animation-delay: 0.30s; }
+
+@keyframes slideInLink {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
 /* ============================================
 HERO SECTION
 ============================================ */
@@ -220,7 +239,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: url('Background1.png') center/cover no-repeat;
+background: url('hero.png') center/cover no-repeat;
 will-change: transform;
 }
 .hero__overlay {
@@ -231,9 +250,9 @@ width: 100%;
 height: 100%;
 background: linear-gradient(
 180deg,
-rgba(0,0,0,0.3) 0%,
-rgba(0,0,0,0.1) 50%,
-rgba(0,0,0,0.6) 100%
+rgba(0,0,0,0.2) 0%,
+rgba(0,0,0,0.6) 50%,
+rgba(0,0,0,0.1) 100%
 );
 }
 .hero__content {
@@ -1000,9 +1019,9 @@ transform: scale(1) !important;
 <!-- Einleitung - Fade Scroll Section -->
 <section class="fade-scroll" id="motivation">
 <div class="fade-scroll__background">
-<div class="fade-scroll__bg-item fade-scroll__bg-item--active" style="background-image: url('bgp1.png');"></div>
-<div class="fade-scroll__bg-item" style="background-image: url('bgp2.png');"></div>
+<div class="fade-scroll__bg-item fade-scroll__bg-item--active" style="background-image: url('bgp2.png');"></div>
 <div class="fade-scroll__bg-item" style="background-image: url('bgp3.png');"></div>
+<div class="fade-scroll__bg-item" style="background-image: url('bgp4.png');"></div>
 </div>
 <div class="fade-scroll__foreground">
 <div class="fade-scroll__slide">
